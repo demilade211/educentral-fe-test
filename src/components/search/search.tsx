@@ -22,8 +22,8 @@ const Search: React.FC<any> = ({ onSearchChange }) => {
   const [search, setSearch] = useState<SearchResult | null>(null);
 
   const loadOptions = async (inputValue: string) => {
-    // Add a delay of 4 seconds (4000 milliseconds) before making the request
-    await new Promise(resolve => setTimeout(resolve, 4000));
+    // Add a delay of 1 seconds (1000 milliseconds) before making the request
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     const response = await fetch(
       `${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
